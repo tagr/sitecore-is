@@ -2,7 +2,10 @@ import { useState } from 'react';
 import useInterval from '../utils/useInterval';
 
 const style = {
+    backgroundColor: 'rgba(0,0,0,0.9)',
     color: 'darkturquoise',
+    display: 'inline-block',
+    padding: '1vw 2vw'
   };
 
 export default function WordCycle(props) {
@@ -11,7 +14,7 @@ export default function WordCycle(props) {
 
     useInterval(() => {
         setIndex( index === props.words.length - 1 ? 0 : index + 1);
-      }, 1000);
+      }, 2000);
     
-      return <span style={style}>{props.words[index]}</span>;
+      return <span style={style}>{" "}{props.words[index]}</span>;
 }
