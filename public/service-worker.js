@@ -1,6 +1,7 @@
 const cacheName = "si-pwa-v1.0.0";
 const assets =[
-    '/'
+    '/',
+    '/images/andy-merhaut.png'
 ];
 
 self.addEventListener('install', e => {

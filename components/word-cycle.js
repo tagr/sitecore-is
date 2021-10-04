@@ -16,5 +16,5 @@ export default function WordCycle(props) {
         setIndex( index === props.words.length - 1 ? 0 : index + 1);
       }, 2000);
     
-      return <span style={style}>{" "}{props.words[index]}</span>;
+      return <span className="rounded-full py-3 px-6" style={style}>{" "}{props.words[index]}</span>;
 }
