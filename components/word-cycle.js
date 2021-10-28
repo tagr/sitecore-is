@@ -1,20 +1,17 @@
-import { useState } from 'react';
-import useInterval from '../utils/useInterval';
-
-const style = {
-    backgroundColor: 'rgba(0,0,0,0.9)',
-    color: 'darkturquoise',
-    display: 'inline-block',
-    padding: '1vw 2vw'
-  };
+import { useState } from "react";
+import useInterval from "../utils/useInterval";
 
 export default function WordCycle(props) {
+  let [index, setIndex] = useState(0);
 
-    let [index, setIndex] = useState(0);
+  useInterval(() => {
+    setIndex(index === props.words.length - 1 ? 0 : index + 1);
+  }, 2000);
 
-    useInterval(() => {
-        setIndex( index === props.words.length - 1 ? 0 : index + 1);
-      }, 2000);
-    
-      return <span className="rounded-full py-3 px-6" style={style}>{" "}{props.words[index]}</span>;
+  return (
+    <span className="animate-pulse px-8 text-7xl text-white">
+      {" "}
+      {props.words[index]}
+    </span>
+  );
 }

@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react';
 import Head from 'next/head';
 import Footer from '@/components/Footer.tsx';
+import Nav from '@/components/Nav.tsx';
 import Meta from '@/components/meta';
 
 type LayoutProps = {
@@ -19,9 +20,11 @@ const Layout = (props: LayoutProps) => {
                 <Meta />
             </Head>  
             <div className={props.className}>
+                <Nav />
                 {props.children}
-                <Footer />
+                
             </div>
+            <Footer />
             
         </>
     )
