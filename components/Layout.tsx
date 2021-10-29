@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import Head from 'next/head';
 import Footer from '@/components/Footer.tsx';
-import Nav from '@/components/Nav.tsx';
+import Navigation from '@/components/Navigation.tsx';
 import Meta from '@/components/meta';
 
 type LayoutProps = {
@@ -19,16 +19,13 @@ const Layout = (props: LayoutProps) => {
                 <meta name="description" content={props.metaDescription} />
                 <Meta />
             </Head>  
-            <div className={props.className}>
-                <Nav />
-                {props.children}
-                
+            <Navigation />
+            <div className={props.className} role="main">
+                {props.children}        
             </div>
-            <Footer />
-            
+            <Footer />   
         </>
     )
 }
-
 
 export default Layout;

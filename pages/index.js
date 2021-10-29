@@ -24,7 +24,7 @@ export default function Home() {
           />
         </div>
         <div>
-          <h1 className="text-8xl py-6 font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-100 to-blue-50">
+          <h1 className="text-5xl sm:text-8xl py-6 font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-100 to-blue-50">
             <em>
               Sitecore is...
               <br />
@@ -33,16 +33,6 @@ export default function Home() {
               />
             </em>
           </h1>
-
-          {/* <p>
-            by{" "}
-            <a
-              href="https://www.linkedin.com/in/andymerhaut/"
-              title="LinkedIn profile"
-            >
-              Andy Merhaut
-            </a>
-          </p> */}
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 xl:gap-8 py-8">
           <Card title="Next.js &amp; REST APIs" />
