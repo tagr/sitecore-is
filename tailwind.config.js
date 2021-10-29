@@ -4,7 +4,12 @@ module.exports = {
   purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   darkMode: "media", // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        pixel: "url('/images/pixel.png')",
+        star: "url('/images/starpattern.png')",
+      },
+    },
     // colors: {
     //   transparent: "transparent",
     //   current: "currentColor",
@@ -15,7 +20,9 @@ module.exports = {
     // },
   },
   variants: {
-    extend: {},
+    extend: {
+      animation: ["hover", "focus"],
+    },
   },
   plugins: [],
 };

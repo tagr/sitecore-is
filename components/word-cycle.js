@@ -9,8 +9,7 @@ export default function WordCycle(props) {
   }, 2000);
 
   return (
-    <span className="animate-pulse px-8 text-5xl sm:text-8xl text-white">
-      {" "}
+    <span className="animate-pulse px-8 text-4xl sm:text-8xl text-white dark:text-pink-400">
       {props.words[index]}
     </span>
   );
